@@ -1,0 +1,371 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #E1D4C9;
+    width: 1360px;
+    margin: auto;
+}
+
+header div{
+    position: fixed;
+    top: 0; 
+    width: 1360px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #E1D4C9;
+}
+
+header .img-logo{
+    width: 100px;
+    height: 60px;
+}
+
+header nav{
+    display: flex;
+    gap: 40px;
+}
+
+header nav p, header button{
+    font: 600 16px Inter;
+    line-height: 150%;
+    color:#403F3D;
+}
+
+header button{
+    border-width: 0;
+    background-color: transparent;
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 2px solid transparent;
+}
+
+header button p{
+    width: 44px;
+    height: 22px;
+}
+
+header button .img-menu{
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 8px;
+}
+
+header button:hover{
+    border-bottom: 2px solid #403F3D;
+}
+
+.preview{
+    background-image: url(resours/background.jpg);
+    width: 1360px;
+    border-radius: 40px;
+    margin-top: 80px;
+}
+
+.preview div{
+    padding: 100px;
+    width: 530px;
+}
+
+.preview h1{
+    font: 600 72px Inter;
+    line-height: 105%;
+    color: #E1D4C9;
+}
+
+.preview h1 span{
+    font-style: italic;
+    color: #B0907A;
+}
+
+.preview p{
+    font: 400 16px Inter;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #E1D4C9;
+    padding: 40px 0;
+}
+
+.preview button{
+    width: 200px;
+    height: 64px;
+    border-radius: 100px;
+    border-width: 0;
+    background-color: #E1D4C9;
+    font: 600 16px Inter;
+    line-height: 150%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.preview button img{
+    display: none;
+}
+
+.preview button:hover img{
+    display: block;
+}
+
+.slaider{
+    margin: 100px 0;
+}
+
+.slaider h2{
+    text-align: center;
+    font: 600 60px Inter;
+    line-height: 125%;
+    color:#403F3D;
+}
+
+.slaider h2 span, .about p span, .mobile-app h2 span{
+    font-style: italic;
+    color: #B0907A;
+}
+
+.slaider div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slaider .position{
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    gap: 16px;
+}
+
+.slaider .position h4{
+    font: 600 24px Inter;
+    line-height: 125%;
+    text-align: center;
+    color: #403F3D;
+}
+
+.position p{
+    font: 400 16px Inter;
+    line-height: 150%;
+    text-align: center;
+    color: #403F3D;
+}
+
+.position .praice{
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.about{
+    margin: 0 0 100px 0;
+}
+
+.about p{
+    font: 600 60px Inter;
+    line-height: 125%;
+    color: #403F3D;
+}
+
+.about div{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.about .images{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.images .img-height-590{
+    width: 660px;
+    height: 590px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.images .img-height-430{
+    width: 660px;
+    height: 430px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.mobile-app{
+    display: flex;
+}
+
+
+.mobile-app .offer{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 144px 0;
+}
+
+.mobile-app .contener{
+    display: flex;
+    gap: 20px;
+}
+
+
+.mobile-app h2{
+    font: 600 60px Inter;
+    font-style: Italic;
+    line-height: 125%;
+    color:#403F3D;
+}
+
+.mobile-app p{
+    font: 400 16px Inter;
+    font-style: Regular;
+    line-height: 150%;
+    color:#403F3D;
+}
+
+.mobile-app button{
+    display: flex;
+    gap: 8px;
+    background-color: transparent;
+    width: 200px;
+    /* height: 64px; */
+    padding-top: 12px;
+    /* padding-right: 20px; */
+    padding-bottom: 12px;
+    padding-left: 20px;
+    border-radius: 100px;
+    border-width: 1px;
+
+    & img:first-child {
+        display: block;
+    }
+
+    & img:nth-child(2) {
+        display: none;
+    }
+}
+
+.mobile-app button img{
+    width: 36px;
+    height: 36px;
+    background-size: contain;
+}
+
+.button .text{
+    font: 600 10px Inter;
+    line-height: 140%;
+    text-align: start;
+    color: #403F3D;
+}
+
+.button p{
+    font: 600 16px Inter;
+    line-height: 150%;
+    color: #403F3D;
+}
+
+.mobile-app button:hover {
+    
+    & img:first-child {
+        display: none;
+    }
+
+    & img:nth-child(2) {
+        display: block;
+    }
+     
+    & p{
+        color:  #E1D4C9;;
+    }
+
+    background-color: #665F55;
+}
+
+footer{
+    background-color: #665F55;
+    /* height: 450px; */
+    margin: 100px 0 20px 0;
+    border-radius: 40px;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+footer .button-content{
+    display: flex;
+    margin-top: 40px;
+    gap: 12px;
+}
+
+footer .button-content div{
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    border: 1px solid #C1B6AD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img:first-child{
+        display: block;
+    }
+
+    & img:nth-child(2){
+        display: none;
+    }
+}
+
+footer .button-content .instagram:hover{
+    background-color: #E1D4C9;
+    border-color: transparent;
+
+    & img:first-child{
+        display: none;
+    }
+
+    & img:nth-child(2){
+        display: block;
+    }
+}
+
+footer div h2{
+    font: 600 60px Inter;
+    line-height: 125%;
+    color: #E1D4C9;
+}
+
+footer div h2 span{
+    color: #B0907A;
+}
+
+footer div p{
+    font: 600 24px Inter;
+    line-height: 125%;
+    color: #E1D4C9;
+    margin-bottom: 40px; 
+}
+
+footer nav p{
+    font: 600 16px Inter;
+    line-height: 150%;
+    color: #E1D4C9;
+    margin-bottom: 20px;
+}
+
+footer nav p:hover{
+    text-decoration: underline 2px;
+}
+
+footer nav img{
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    vertical-align: top;
+}
