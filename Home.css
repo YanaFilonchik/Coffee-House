@@ -5,14 +5,18 @@
 
 body{
     background-color: #E1D4C9;
-    width: 1360px;
+    max-width: 1360px;
     margin: auto;
 }
 
-header div{
+header{
     position: fixed;
-    top: 0; 
-    width: 1360px;
+    top: 0;
+    max-width: 1360px;
+    width: 100%;
+}
+
+header .content-heder{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,16 +63,39 @@ header button:hover{
     border-bottom: 2px solid #403F3D;
 }
 
+header div .burger-menu{
+    display: inline;
+    display: none;
+    font-size: 0; 
+
+    img:last-child {
+            display: none;
+        }
+}
+
+header div .burger-menu:active{
+
+    img:last-child{
+        display: block;
+    }
+
+    img:first-child{
+        display: none;
+    }
+
+}
+
 .preview{
     background-image: url(resours/background.jpg);
-    width: 1360px;
+    background-position: center;
+    max-width: 1360px;
     border-radius: 40px;
     margin-top: 80px;
 }
 
 .preview div{
     padding: 100px;
-    width: 530px;
+    max-width: 530px;
 }
 
 .preview h1{
@@ -123,6 +150,10 @@ header button:hover{
     color:#403F3D;
 }
 
+.slaider img{
+    max-width: 480px;
+}
+
 .slaider h2 span, .about p span, .mobile-app h2 span{
     font-style: italic;
     color: #B0907A;
@@ -137,7 +168,7 @@ header button:hover{
 .slaider .position{
     display: flex;
     flex-direction: column;
-    width: 480px;
+    max-width: 480px;
     gap: 16px;
 }
 
@@ -184,15 +215,15 @@ header button:hover{
 }
 
 .images .img-height-590{
-    width: 660px;
-    height: 590px;
+    max-width: 660px;
+    max-height: 590px;
     border-radius: 20px;
     object-fit: cover;
 }
 
 .images .img-height-430{
-    width: 660px;
-    height: 430px;
+    max-width: 660px;
+    max-height: 430px;
     border-radius: 20px;
     object-fit: cover;
 }
@@ -201,6 +232,10 @@ header button:hover{
     display: flex;
 }
 
+.mobile-app img{
+    max-width: 630px;
+    max-height: 630px;
+}
 
 .mobile-app .offer{
     display: flex;
@@ -368,4 +403,74 @@ footer nav img{
     height: 20px;
     margin-right: 4px;
     vertical-align: top;
+}
+
+@media (max-width: 780px){
+
+    header div .burger-menu{
+        display: block;
+    }
+
+    header nav, header div button{
+        display: none;
+    } 
+
+    .about div{
+        gap: 0;
+    }
+
+    .mobile-app .offer{
+        margin: 0;
+    }
+
+    .mobile-app{
+         align-items: center;
+    }
+
+}
+
+@media (max-width: 1400px){
+    
+    .images .img-height-430{
+        display: none;
+    }
+
+    .about div{
+        flex-direction: column;
+    }
+
+    .about .images{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobile-app{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+/* @media (max-width: 600px){
+
+    footer{
+        flex-direction: column;
+    }
+} */
+
+@media (max-width: 895px){
+    footer{
+        flex-direction: column;
+        align-items: start;
+        gap: 100px;
+    }
+}
+
+@media (max-width: 535px){
+    footer div h2{
+        font-size: 32px;
+    }
+
+    footer {
+        gap: 40px;
+    }
 }
