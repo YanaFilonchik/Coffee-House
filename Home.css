@@ -240,6 +240,7 @@ header div .burger-menu:active{
     margin-top: 40px;
 }
 
+
 .images .img-height-590{
     max-width: 660px;
     max-height: 590px;
@@ -448,6 +449,7 @@ footer nav img{
 
     .about div{
         flex-direction: column;
+        gap: 0;
     }
 
     .about .images{
@@ -471,10 +473,6 @@ footer nav img{
     .preview div{
         padding: 100px 60px;
     }
-        
-    .about div{
-        gap: 0;
-    }
 
     footer{
         flex-direction: column;
@@ -496,10 +494,6 @@ footer nav img{
     .mobile-app .offer{
         margin: 0;
     }
-
-    /* .mobile-app{
-         align-items: center;
-    } */
 }
 
 @media (max-width: 600px){
@@ -519,10 +513,6 @@ footer nav img{
     .slaider h2, .about p, .mobile-app h2{
         font-size: 32px;
     }
-
-    /* .mobile-app .img-phone img{
-        max-width: 348px;
-    } */
     
     .preview div{
         padding: 60px 16px;
@@ -530,6 +520,10 @@ footer nav img{
 
     .mobile-app .contener{
         flex-direction: column;
+    }
+
+    .images .img-height-590 {
+        max-width:  445px;
     }
 }
 
@@ -540,5 +534,10 @@ footer nav img{
 
     footer {
         gap: 40px;
+    }
+
+    .images .img-height-590 {
+        width: 348px;
+        height: 590px;
     }
 }
