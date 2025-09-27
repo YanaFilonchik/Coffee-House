@@ -69,8 +69,8 @@ header div .burger-menu{
     font-size: 0; 
 
     img:last-child {
-            display: none;
-        }
+        display: none;
+    }
 }
 
 header div .burger-menu:active{
@@ -96,6 +96,7 @@ header div .burger-menu:active{
 .preview div{
     padding: 100px;
     max-width: 530px;
+    justify-content: flex-start;
 }
 
 .preview h1{
@@ -150,9 +151,9 @@ header div .burger-menu:active{
     color:#403F3D;
 }
 
-.slaider img{
+/* .slaider .slaider-img{
     max-width: 480px;
-}
+} */
 
 .slaider h2 span, .about p span, .mobile-app h2 span{
     font-style: italic;
@@ -165,11 +166,36 @@ header div .burger-menu:active{
     align-items: center;
 }
 
+.slaider .slaider-button{
+    img{
+        width: 60px;
+    }
+
+    img:last-child{
+        display: none;
+    }
+}
+
+.slaider .slaider-button:hover{
+    img:first-child{
+        display: none;
+    }
+
+    img:last-child{
+        display: block;
+    }
+}
+
 .slaider .position{
     display: flex;
     flex-direction: column;
-    max-width: 480px;
+    /* max-width: 480px; */
     gap: 16px;
+}
+
+.slaider .position img{
+    max-width: 480px;
+    width: 100%;
 }
 
 .slaider .position h4{
@@ -179,14 +205,14 @@ header div .burger-menu:active{
     color: #403F3D;
 }
 
-.position p{
+.slaider .position p{
     font: 400 16px Inter;
     line-height: 150%;
     text-align: center;
     color: #403F3D;
 }
 
-.position .praice{
+.slaider .position .praice{
     font-weight: 600;
     font-size: 24px;
 }
@@ -219,6 +245,8 @@ header div .burger-menu:active{
     max-height: 590px;
     border-radius: 20px;
     object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .images .img-height-430{
@@ -226,15 +254,23 @@ header div .burger-menu:active{
     max-height: 430px;
     border-radius: 20px;
     object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .mobile-app{
     display: flex;
+    justify-content: space-between;
 }
 
-.mobile-app img{
+.mobile-app .img-phone{
+    display: flex;
+    align-items: center;
+}
+
+.mobile-app .img-phone img{
     max-width: 630px;
-    max-height: 630px;
+    width: 100%;
 }
 
 .mobile-app .offer{
@@ -324,13 +360,12 @@ header div .burger-menu:active{
 
 footer{
     background-color: #665F55;
-    /* height: 450px; */
     margin: 100px 0 20px 0;
     border-radius: 40px;
-    padding: 100px;
+    padding: 7%;
     display: flex;
     align-items: center;
-    gap: 100px;
+    gap: 7%;
 }
 
 footer .button-content{
@@ -405,31 +440,7 @@ footer nav img{
     vertical-align: top;
 }
 
-@media (max-width: 780px){
-
-    header div .burger-menu{
-        display: block;
-    }
-
-    header nav, header div button{
-        display: none;
-    } 
-
-    .about div{
-        gap: 0;
-    }
-
-    .mobile-app .offer{
-        margin: 0;
-    }
-
-    .mobile-app{
-         align-items: center;
-    }
-
-}
-
-@media (max-width: 1400px){
+@media (max-width: 1000px){
     
     .images .img-height-430{
         display: none;
@@ -447,21 +458,78 @@ footer nav img{
     .mobile-app{
         flex-direction: column;
         justify-content: center;
+        /* align-items: center; */
+    } 
+
+    .mobile-app .img-phone{
+        justify-content: center;
     }
 }
 
-/* @media (max-width: 600px){
+
+@media (max-width: 895px){
+    .preview div{
+        padding: 100px 60px;
+    }
+        
+    .about div{
+        gap: 0;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 100px;
+    }
+}
+
+@media (max-width: 780px){
+
+    header div .burger-menu{
+        display: block;
+    }
+
+    header nav, header div button{
+        display: none;
+    } 
+
+    .mobile-app .offer{
+        margin: 0;
+    }
+
+    /* .mobile-app{
+         align-items: center;
+    } */
+}
+
+@media (max-width: 600px){
 
     footer{
         flex-direction: column;
     }
-} */
 
-@media (max-width: 895px){
-    footer{
+    .slaider .slaider-button{
+        display: none;
+    }
+
+    .preview h1{
+        font-size: 42px;
+    }
+
+    .slaider h2, .about p, .mobile-app h2{
+        font-size: 32px;
+    }
+
+    /* .mobile-app .img-phone img{
+        max-width: 348px;
+    } */
+    
+    .preview div{
+        padding: 60px 16px;
+    }
+
+    .mobile-app .contener{
         flex-direction: column;
-        align-items: start;
-        gap: 100px;
     }
 }
 
